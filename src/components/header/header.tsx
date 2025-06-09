@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { ActiveLink } from "../active-link";
-import Image from "next/image";
+import { Logo } from "../logo";
 
 export const Header = () => {
     return (
@@ -9,20 +9,12 @@ export const Header = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex justify-center items-center gap-3">
-                        <Link href="/">
-                            <Image
-                                src={"/Logo.svg"}
-                                alt="Logo"
-                                width={24}
-                                height={24}
-                            />
-                        </Link>
-                        <h2 className="text-xl">Site.Set</h2>
+                        <Logo />
                     </div>
                     <nav className="flex items-center gap-6">
                         <ActiveLink href={"/"} >Início</ActiveLink>
                         <ActiveLink href={"/blog"} >Blog</ActiveLink>
-                        <Button className="rounded-full" variant="secondary" asChild >
+                        <Button variant="secondary" asChild >
                             <Link href={"/comecar"}>
                                 Começar
                             </Link>
