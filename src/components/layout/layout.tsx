@@ -1,6 +1,7 @@
-import { Footer } from "../footer";
-import { Header } from "../header/header"
+
 import { Inter, PT_Sans_Caption } from "next/font/google"
+import { Header } from "./header/header";
+import { Footer } from "./footer";
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -20,7 +21,7 @@ const ptSansCaption = PT_Sans_Caption({
 
 export const Layout = ({ children }: LayoutProps) => {
     return (
-        <div className={`${inter.className} ${ptSansCaption.className} relative flex min-h-screen flex-col bg-gray-700 font-inter`}>
+        <div className={`${inter.className} ${ptSansCaption.className} relative flex min-h-screen flex-col bg-gray-700 font-inter `}>
             <Header />
             <main className="flex-1 flex mt-10 mb-12 flex-col">
                 {children}
